@@ -6,18 +6,12 @@ function App() {
   return (
     <>
       <div>
-        <div className="">
-          <Starfield
-            alphaFactor={1.9}
-            starCount={10000}
-            starColor={[255, 255, 255]}
-            speedFactor={0.05}
-            backgroundColor="black"
-          />
-        </div>
+        <div className=""></div>
 
         <Home />
-        <h1 className="text-black bg-orange-700/100 text-[100px]">Hello</h1>
+        <div>
+          <h1 className="text-black bg-orange-700 text-[100px]">Hello</h1>
+        </div>
       </div>
     </>
   );
