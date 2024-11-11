@@ -9,11 +9,11 @@ const Saturn = () => {
 
   return (
     <>
-      <hemisphereLight intensity={2} groundColor="black" />
+      <hemisphereLight intensity={3} groundColor="black" />
 
       <primitive
         object={saturn.scene}
-        scale={0.002}
+        scale={0.003}
         position-y={0}
         rotation-y={0}
       />
