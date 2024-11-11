@@ -4,6 +4,7 @@ import Starfield from "react-starfield";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../components/ContextProvider";
 // import { useEffect } from "react";
+import EarthWeather from "../components/EarthWeather";
 
 function Home() {
   useEffect(() => {
@@ -36,6 +37,11 @@ function Home() {
       <div className="h-screen">
         <EarthCanvas />
       </div>
+        {/* EarthWeather section */}
+        <div style={{ width: "100%", padding: "2rem", textAlign: "center" }}>
+          <EarthWeather />  
+        </div>
+        
     </div>
   );
 }
