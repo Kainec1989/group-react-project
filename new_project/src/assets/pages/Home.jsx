@@ -33,9 +33,9 @@ function Home() {
         />
       </div>
       <Navbar />
-      {/* <div className="h-screen">
+      <div className="h-screen">
         <EarthCanvas />
-      </div> */}
+      </div>
     </div>
   );
 }
