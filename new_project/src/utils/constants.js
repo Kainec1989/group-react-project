@@ -11,20 +11,20 @@ const navLinks = [
 
 const navStyles = {
   Earth:
-    "px-10 z-10 bg-gradient-to-l from-emerald-500 to-blue-700 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-emerald-500 to-blue-700 px-10 z-10  p-4 w-full flex justify-between",
   Mercury:
-    "px-10 z-10 bg-gradient-to-l from-slate-300 to-slate-600 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-slate-300 to-slate-600 px-10 z-10  p-4 w-full flex justify-between",
   Venus:
-    "px-10 z-10 bg-gradient-to-l from-amber-200 to-amber-400 p-4 w-full flex justify-between",
-  Mars: "px-10 z-10 bg-gradient-to-l from-orange-200 to-orange-900 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-amber-200 to-amber-400 px-10 z-10  p-4 w-full flex justify-between",
+  Mars: "bg-gradient-to-l from-orange-200 to-orange-900 px-10 z-10  p-4 w-full flex justify-between",
   Jupiter:
-    "px-10 z-10 bg-gradient-to-l from-orange-100 to-yellow-700 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-orange-100 to-yellow-700 px-10 z-10  p-4 w-full flex justify-between",
   Saturn:
-    "px-10 z-10 bg-gradient-to-l from-neutral-300 to-[#BCB095] p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-neutral-300 to-[#BCB095] px-10 z-10  p-4 w-full flex justify-between",
   Uranus:
-    "px-10 z-10 bg-gradient-to-l from-teal-600 to-cyan-700 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-teal-600 to-cyan-700 px-10 z-10 p-4 w-full flex justify-between",
   Neptune:
-    "px-10 z-10 bg-gradient-to-l from-blue-400 to-blue-800 p-4 w-full flex justify-between",
+    "bg-gradient-to-l from-blue-400 to-blue-800 px-10 z-10  p-4 w-full flex justify-between",
 };
 
 export { navLinks, navStyles };
