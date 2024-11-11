@@ -9,8 +9,8 @@ const Jupiter = () => {
 
   return (
     <>
-      <hemisphereLight intensity={7} groundColor="black" />
-
+      <hemisphereLight intensity={0.2} groundColor="black" />
+      <directionalLight intensity={5} position={[50, 5, 5]} castShadow={true} />
       <primitive
         object={jupiter.scene}
         scale={0.04}

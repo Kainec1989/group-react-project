@@ -9,8 +9,12 @@ const Mars = () => {
 
   return (
     <>
-      <hemisphereLight intensity={15} groundColor="black" />
-
+      <hemisphereLight intensity={5} groundColor="black" />
+      <directionalLight
+        intensity={10}
+        position={[50, 5, 5]}
+        castShadow={true}
+      />
       <primitive
         object={mars.scene}
         scale={0.04}

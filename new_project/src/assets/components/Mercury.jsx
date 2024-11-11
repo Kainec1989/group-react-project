@@ -9,7 +9,7 @@ const Mercury = () => {
 
   return (
     <>
-      <hemisphereLight intensity={15} groundColor="black" />
+      <hemisphereLight intensity={0.1} groundColor="black" />
 
       <primitive
         object={mercury.scene}

@@ -9,8 +9,8 @@ const Venus = () => {
 
   return (
     <>
-      <hemisphereLight intensity={10} groundColor="black" />
-
+      <hemisphereLight intensity={0.2} groundColor="black" />
+      <directionalLight intensity={5} position={[50, 5, 5]} castShadow={true} />
       <primitive
         object={venus.scene}
         scale={0.04}
