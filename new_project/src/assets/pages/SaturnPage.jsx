@@ -1,20 +1,14 @@
-import EarthCanvas from "../components/Earth";
+import SaturnCanvas from "../components/Saturn";
 import Navbar from "../components/Navbar";
 import Starfield from "react-starfield";
+import { motion } from "framer-motion";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../components/ContextProvider";
-// import { useEffect } from "react";
 
-function Home() {
-  useEffect(() => {
-    fetch("https://ssd.jpl.nasa.gov/api/horizons.api")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
-
+function SaturnPage() {
   const { setPage } = useContext(MyContext);
   useEffect(() => {
-    setPage("Earth");
+    setPage("Saturn");
   }, []);
 
   return (
@@ -33,11 +27,11 @@ function Home() {
         />
       </div>
       <Navbar />
-      {/* <div className="h-screen">
-        <EarthCanvas />
-      </div> */}
+      {/* <motion.div className="h-screen ">
+        <SaturnCanvas />
+      </motion.div> */}
     </div>
   );
 }
 
-export default Home;
+export default SaturnPage;
