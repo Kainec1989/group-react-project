@@ -9,8 +9,8 @@ const Uranus = () => {
 
   return (
     <>
-      <hemisphereLight intensity={0.5} groundColor="black" />
-      <ambientLight intensity={1} />
+      <hemisphereLight intensity={0.1} groundColor="black" />
+      <directionalLight intensity={2} position={[50, 5, 5]} castShadow={true} />
 
       <primitive
         object={uranus.scene}
