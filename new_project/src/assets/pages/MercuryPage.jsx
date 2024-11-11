@@ -26,14 +26,14 @@ function MercuryPage() {
         />
       </div>
       <Navbar />
-      {/* <motion.div
+      <motion.div
         className="h-screen"
         transition={{ duration: 2 }}
         initial={{ opacity: 0, x: "-100%" }}
         animate={{ opacity: 1, x: 0 }}
       >
         <MercuryCanvas />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 }
