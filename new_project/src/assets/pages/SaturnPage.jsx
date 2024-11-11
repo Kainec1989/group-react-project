@@ -27,9 +27,14 @@ function SaturnPage() {
         />
       </div>
       <Navbar />
-      {/* <motion.div className="h-screen ">
+      <motion.div
+        className="h-screen"
+        transition={{ duration: 2 }}
+        initial={{ opacity: 0, x: "-100%" }}
+        animate={{ opacity: 1, x: 0 }}
+      >
         <SaturnCanvas />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 }
