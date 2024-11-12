@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './EarthWeather.css';
+
 
 const EarthWeather = () => {
   const [city, setCity] = useState('');
@@ -16,6 +16,8 @@ const EarthWeather = () => {
     try {
       const response = await axios.get(API_URL);
       setWeatherData(response.data);
+     
+      
       setError('');  
     } catch (err) {
       setError('City not found, please try again.');
