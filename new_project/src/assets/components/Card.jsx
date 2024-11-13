@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const Card = ({ sol, data }) => {
@@ -12,7 +11,7 @@ const Card = ({ sol, data }) => {
         cursor: "pointer",
         margin: "10px",
         padding: "10px",
-        border: "1px solid orange",
+        border: "1px solid grey",
         flex: "1 1 calc(25% - 20px)",
         backgroundColor: "rgba(0, 0, 0, 0.5)",
         color: "white",
@@ -25,11 +24,11 @@ const Card = ({ sol, data }) => {
       }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      //transition={{ duration: 0.5, delay: parseInt(sol.replace("sol", "")) * 0.1 }}
-      onClick={() => alert(`Sol ${sol} clicked!`)}
     >
       <h2>Sol {sol}</h2>
+      <hr className="border-white border w-full" />
       <p>Temperature: {temperature} °C</p>
+
       <p>Wind Speed: {windSpeed} m/s</p>
       <p>Pressure: {pressure} Pa</p>
     </motion.div>

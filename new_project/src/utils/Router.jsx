@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../assets/pages/Home.jsx";
+import GalaxyPage from "../assets/pages/GalaxyPage.jsx";
+import EarthPage from "../assets/pages/EarthPage.jsx";
 import MercuryPage from "../assets/pages/MercuryPage.jsx";
 import VenusPage from "../assets/pages/VenusPage.jsx";
 import MarsPage from "../assets/pages/MarsPage.jsx";
@@ -8,12 +9,16 @@ import SaturnPage from "../assets/pages/SaturnPage.jsx";
 import UranusPage from "../assets/pages/UranusPage.jsx";
 import NeptunePage from "../assets/pages/NeptunePage.jsx";
 import Apod from "../assets/pages/Apod.jsx";
-import PageNotFound from "../assets/pages/PageNotFound.jsx"
+import PageNotFound from "../assets/pages/PageNotFound.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <GalaxyPage />,
+  },
+  {
+    path: "/earth",
+    element: <EarthPage />,
   },
   {
     path: "/mercury",
@@ -49,10 +54,8 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: < PageNotFound/>,
-  }
-  
-  
+    element: <PageNotFound />,
+  },
 ]);
 
 export default router;
