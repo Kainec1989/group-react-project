@@ -12,10 +12,22 @@ function Navbar() {
 
   return (
     <nav className={navStyles[page]}>
-      <h1 className="text-white ">
-        Hello Wold{page === "Earth" ? "!" : `, from ${page}`}
+      <h1 className="text-white text-2xl ">
+        Hello Peeps{page === "Earth" ? "!" : `, from ${page}`}
       </h1>
-      <div className="absolute right-10 z-1">
+
+     <div className=" absolute right-10 z-1 flex flex-rowitems-center space-x-9">
+      <div className="group relative inline-block">
+      <Link to="/Apod">
+          <button className=" text-black py-2 px-4 rounded cursor-wait " >
+            Apod
+          </button>
+        </Link>
+        <span className="absolute left-0 top-full mt-2 w-full text-center text-white  py-1 px-2 rounded opacity-0 group-hover:opacity-50">
+        Astronomy Picture of the Day
+        </span>
+
+        </div>
         <button onClick={() => setIsOpen(!isOpen)}>
           Planets{" "}
           <motion.div
@@ -52,6 +64,7 @@ function Navbar() {
           )}
         </AnimatePresence>
       </div>
+     
     </nav>
   );
 }

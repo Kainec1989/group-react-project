@@ -1,3 +1,4 @@
+
 const navLinks = [
   { name: "Mercury", path: "/mercury" },
   { name: "Venus", path: "/venus" },
@@ -7,7 +8,11 @@ const navLinks = [
   { name: "Saturn", path: "/saturn" },
   { name: "Uranus", path: "/uranus" },
   { name: "Neptune", path: "/neptune" },
+  
+  
 ];
+
+
 
 const navStyles = {
   Earth:
@@ -25,6 +30,8 @@ const navStyles = {
     "bg-gradient-to-l from-teal-600 to-cyan-700 px-10 z-10 p-4 w-full flex justify-between",
   Neptune:
     "bg-gradient-to-l from-blue-400 to-blue-800 px-10 z-10  p-4 w-full flex justify-between",
+  Apod: 
+  "bg-gradient-to-l from-red-400 to-grey-800 px-10 z-10  p-4 w-full flex justify-between",
 };
 
-export { navLinks, navStyles };
+export { navLinks, navStyles ,};

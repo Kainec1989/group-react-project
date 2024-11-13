@@ -7,6 +7,8 @@ import JupiterPage from "../assets/pages/JupiterPage.jsx";
 import SaturnPage from "../assets/pages/SaturnPage.jsx";
 import UranusPage from "../assets/pages/UranusPage.jsx";
 import NeptunePage from "../assets/pages/NeptunePage.jsx";
+import Apod from "../assets/pages/Apod.jsx";
+import PageNotFound from "/home/dci-studetns/group-react-project/new_project/src/assets/pages/PageNotFound.jsx"
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,16 @@ const router = createBrowserRouter([
     path: "/neptune",
     element: <NeptunePage />,
   },
+  {
+    path: "/apod",
+    element: <Apod />,
+  },
+  {
+    path: "*",
+    element: < PageNotFound/>,
+  }
+  
+  
 ]);
 
 export default router;
