@@ -6,6 +6,7 @@ import Starfield from "react-starfield";
 import { MyContext } from "../components/ContextProvider";
 import Weather from "../components/Weather";
 import { fetchWeatherData } from "../../../src/constants";
+import { useLocation } from "react-router-dom";
 
 function MarsPage() {
   const [weatherData, setWeatherData] = useState(null);
@@ -22,6 +23,18 @@ function MarsPage() {
   useEffect(() => {
     setPage("Mars");
   }, [setPage]);
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#mars-weather" && weatherData) {
+      setTimeout(() => {
+        const element = document.getElementById("mars-weather");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location, weatherData]);
   console.log(planetData);
 
   return (
@@ -36,7 +49,6 @@ function MarsPage() {
         <Starfield starCount={10000} starColor={[255, 255, 255]} />
       </div>
       <div>
-        <h1>Mars Weather Data</h1>
         <motion.div
           className="h-screen"
           transition={{ duration: 2 }}
@@ -45,6 +57,7 @@ function MarsPage() {
         >
           <MarsCanvas />
         </motion.div>
+
         {weatherData ? (
           <Weather weatherData={weatherData} />
         ) : (
