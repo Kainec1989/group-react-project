@@ -7,10 +7,9 @@ export default function MyContextProvider({ children }) {
   const [planetData, setPlanetData] = useState(null);
   const [error, setError] = useState(null);
 
-  // Fetch function to get data for a specific planet
   const fetchPlanetData = async (planetName) => {
     setError(null);
-    setPlanetData(null); // Clear previous data
+    setPlanetData(null);
 
     try {
       const response = await fetch(
@@ -18,7 +17,7 @@ export default function MyContextProvider({ children }) {
         {
           method: "GET",
           headers: {
-            "X-Api-Key": "8klaizmDraYODCbJkTg/Rw==0noC2QJHrTuUJRM4", // Replace with your actual API key
+            "X-Api-Key": "8klaizmDraYODCbJkTg/Rw==0noC2QJHrTuUJRM4",
           },
         }
       );
@@ -34,7 +33,6 @@ export default function MyContextProvider({ children }) {
     }
   };
 
-  // Use `useEffect` to fetch data automatically when `page` changes
   useEffect(() => {
     if (page) {
       fetchPlanetData(page);
