@@ -18,10 +18,11 @@ function MarsPage() {
     getWeatherData();
   }, []);
 
-  const { setPage } = useContext(MyContext);
+  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
   useEffect(() => {
     setPage("Mars");
   }, [setPage]);
+  console.log(planetData);
 
   return (
     <div>
@@ -44,7 +45,11 @@ function MarsPage() {
         >
           <MarsCanvas />
         </motion.div>
-        {weatherData ? <Weather weatherData={weatherData} /> : <p>Loading...</p>}
+        {weatherData ? (
+          <Weather weatherData={weatherData} />
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );
