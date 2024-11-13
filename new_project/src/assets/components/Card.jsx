@@ -8,10 +8,24 @@ const Card = ({ sol, data }) => {
 
   return (
     <motion.div
-      style={{ cursor: "pointer", margin: "10px", padding: "10px", border: "1px solid orange", flex: "1 1 calc(25% - 20px)" }}
+      style={{
+        cursor: "pointer",
+        margin: "10px",
+        padding: "10px",
+        border: "1px solid orange",
+        flex: "1 1 calc(25% - 20px)",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        height: "25vh",
+      }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      //transition={{ duration: 0.5, delay: parseInt(sol.replace("sol", "")) * 0.1 }}
+      transition={{ duration: 0.5, delay: parseInt(sol.replace("sol", "")) * 0.1 }}
       onClick={() => alert(`Sol ${sol} clicked!`)}
     >
       <h2>Sol {sol}</h2>
