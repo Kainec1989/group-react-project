@@ -25,7 +25,7 @@ const Card = ({ sol, data }) => {
       }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: parseInt(sol.replace("sol", "")) * 0.1 }}
+      //transition={{ duration: 0.5, delay: parseInt(sol.replace("sol", "")) * 0.1 }}
       onClick={() => alert(`Sol ${sol} clicked!`)}
     >
       <h2>Sol {sol}</h2>

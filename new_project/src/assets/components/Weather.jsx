@@ -13,9 +13,8 @@ const Weather = ({ weatherData }) => {
         display: "flex",
         flexWrap: "nowrap",
         overflowX: "auto",
-
         gap: "10px",
-        width: "100vw",
+        height: "30vh",
         textAlign: "left",
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
