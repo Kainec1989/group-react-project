@@ -1,4 +1,5 @@
 import Card from "./Card";
+import backgroundImage from "../../assets/background.jpg"; // Adjust the path as needed
 
 const Weather = ({ weatherData }) => {
   const filteredSols = Object.keys(weatherData).filter((sol) => {
@@ -12,10 +13,15 @@ const Weather = ({ weatherData }) => {
         display: "flex",
         flexWrap: "nowrap",
         overflowX: "auto",
-        color: "orange",
+
         gap: "10px",
         width: "100vw",
         textAlign: "left",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "20px",
+
       }}
     >
       {filteredSols.map((sol) => (
