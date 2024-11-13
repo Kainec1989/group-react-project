@@ -4,9 +4,11 @@ import { useEffect, useContext } from "react";
 import { MyContext } from "../components/ContextProvider";
 import GalaxyCanvas from "../components/Galaxy";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Apod from "./Apod";
 
 function GalaxyPage() {
-  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
+  const { setPage } = useContext(MyContext);
   useEffect(() => {
     setPage("Galaxy");
   }, [setPage]);
@@ -34,6 +36,7 @@ function GalaxyPage() {
       >
         <GalaxyCanvas />
       </motion.div>
+      <Apod />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 const navLinks = [
   { name: "Mercury", path: "/mercury" },
   { name: "Venus", path: "/venus" },
-  { name: "Home", path: "/" },
+  { name: "Earth", path: "/earth" },
   { name: "Mars", path: "/mars" },
   { name: "Jupiter", path: "/jupiter" },
   { name: "Saturn", path: "/saturn" },

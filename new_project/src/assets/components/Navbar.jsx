@@ -13,26 +13,19 @@ function Navbar() {
   return (
     <nav className={navStyles[page]}>
       <h1 className="text-white text-2xl ">
-        Hello Peeps{page === "Earth" ? "!" : `, from ${page}`}
+        Hello Peeps{page === "Galaxy" ? "!" : `, from ${page}`}
       </h1>
 
       <div className=" absolute right-10 z-1 flex  space-x-9">
         <Link to="/">Home</Link>
         <Link to="/earth#earth-weather">Earth Weather</Link>
         <Link to="/mars#mars-weather">Mars Weather</Link>
-        <div className="group relative  flex">
-          <Link to="/Apod" className=" text-black  rounded ">
-            Apod
-          </Link>
-          <span className="absolute left-0 top-full mt-2 w-full text-center text-white  py-1 px-2 rounded opacity-0 group-hover:opacity-50">
-            Astronomy Picture of the Day
-          </span>
-        </div>
+
         <div>
           <button onClick={() => setIsOpen(!isOpen)}>
             Planets
             <motion.div
-              className="inline-block"
+              className="inline-block mx-1"
               initial={{ rotate: 0 }}
               animate={{ rotate: isOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
