@@ -1,9 +1,8 @@
-import React from "react";
 import Card from "./Card";
 import backgroundImage from "../../assets/background.jpg"; // Adjust the path as needed
 
 const Weather = ({ weatherData }) => {
-  const filteredSols = Object.keys(weatherData).filter(sol => {
+  const filteredSols = Object.keys(weatherData).filter((sol) => {
     const solNumber = parseInt(sol.replace("sol", ""));
     return solNumber >= 675 && solNumber <= 681;
   });
@@ -14,6 +13,7 @@ const Weather = ({ weatherData }) => {
         display: "flex",
         flexWrap: "nowrap",
         overflowX: "auto",
+
         gap: "10px",
         width: "100vw",
         textAlign: "left",
@@ -21,6 +21,7 @@ const Weather = ({ weatherData }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "20px",
+
       }}
     >
       {filteredSols.map((sol) => (

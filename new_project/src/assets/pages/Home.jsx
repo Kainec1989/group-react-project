@@ -7,16 +7,17 @@ import { MyContext } from "../components/ContextProvider";
 import EarthWeather from "../components/EarthWeather";
 
 function Home() {
-  useEffect(() => {
-    fetch("https://ssd.jpl.nasa.gov/api/horizons.api")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.api-ninjas.com/v1/planets")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
-  const { setPage } = useContext(MyContext);
+  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
   useEffect(() => {
     setPage("Earth");
   }, []);
+  console.log(planetData);
 
   return (
     <div>
@@ -37,11 +38,10 @@ function Home() {
       <div className="h-screen">
         <EarthCanvas />
       </div>
-        {/* EarthWeather section */}
-        <div style={{ width: "100%", padding: "2rem", textAlign: "center" }}>
-          <EarthWeather />  
-        </div>
-        
+      {/* EarthWeather section */}
+      <div style={{ width: "100%", padding: "2rem", textAlign: "center" }}>
+        <EarthWeather />
+      </div>
     </div>
   );
 }

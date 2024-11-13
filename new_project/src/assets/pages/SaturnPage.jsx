@@ -6,11 +6,11 @@ import { useContext, useEffect } from "react";
 import { MyContext } from "../components/ContextProvider";
 
 function SaturnPage() {
-  const { setPage } = useContext(MyContext);
+  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
   useEffect(() => {
     setPage("Saturn");
   }, []);
-
+  console.log(planetData);
   return (
     <div>
       <div

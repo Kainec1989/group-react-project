@@ -2,15 +2,15 @@ import NeptuneCanvas from "../components/Neptune";
 import Navbar from "../components/Navbar";
 import Starfield from "react-starfield";
 import { motion } from "framer-motion";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../components/ContextProvider";
 
 function NeptunePage() {
-  const { setPage } = useContext(MyContext);
+  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
   useEffect(() => {
     setPage("Neptune");
   }, []);
-
+  console.log(planetData);
   return (
     <div>
       <div
