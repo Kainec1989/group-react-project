@@ -2,7 +2,7 @@ import { useReducer, useEffect } from 'react';
 import { initialState, reducer } from "../../utils/apodReducer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
-import Starfield from 'react-starfield-animation';
+import Starfield from 'react-starfield';
 import Footer from '../components/Footer'; 
 
 
