@@ -4,16 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "./Loader";
 
-const Mars = () => {
-  const mars = useGLTF("/mars/scene.gltf");
+const Galaxy = () => {
+  const galaxy = useGLTF("/galaxy/scene.gltf");
 
   return (
     <>
-      <hemisphereLight intensity={15} groundColor="black" />
+      <hemisphereLight intensity={10} groundColor="black" />
 
       <primitive
-        object={mars.scene}
-        scale={0.04}
+        object={galaxy.scene}
+        scale={20}
         position-y={0}
         rotation-y={0}
       />
@@ -21,7 +21,7 @@ const Mars = () => {
   );
 };
 
-const MarsCanvas = () => {
+const GalaxyCanvas = () => {
   return (
     <Canvas
       style={{ overflow: "visible" }}
@@ -31,18 +31,18 @@ const MarsCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 6],
+        position: [-50, -50, -50],
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
           enableZoom={false}
-          maxPolarAngle={Math.PI}
-          minPolarAngle={0}
+          maxPolarAngle={Math.PI / 3}
+          minPolarAngle={Math.PI / 3}
         />
 
-        <Mars />
+        <Galaxy />
 
         <Preload all />
       </Suspense>
@@ -50,4 +50,4 @@ const MarsCanvas = () => {
   );
 };
 
-export default MarsCanvas;
+export default GalaxyCanvas;
