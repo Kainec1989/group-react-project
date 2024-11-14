@@ -13,6 +13,8 @@ function Navbar() {
   return (
     <nav className={navStyles[page]}>
       <h1 className="text-white text-2xl ">
+
+
         Hello Peeps{page === "Galaxy" ? "!" : `, from ${page}`}
       </h1>
 
@@ -21,9 +23,12 @@ function Navbar() {
         <Link to="/earth#earth-weather">Earth Weather</Link>
         <Link to="/mars#mars-weather">Mars Weather</Link>
 
+
         <div>
           <button onClick={() => setIsOpen(!isOpen)}>
             Planets
+
+
             <motion.div
               className="inline-block mx-1"
               initial={{ rotate: 0 }}

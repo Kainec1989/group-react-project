@@ -6,8 +6,12 @@ import { MyContext } from "../components/ContextProvider";
 import EarthWeather from "../components/EarthWeather";
 import { useLocation } from "react-router-dom";
 
+import { planetDescription } from "../../utils/constants";
+
 function EarthPage() {
-  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
+  const { page, setPage, planetData, error, fetchPlanetData } =
+    useContext(MyContext);
+
   useEffect(() => {
     setPage("Earth");
   }, []);
@@ -43,6 +47,14 @@ function EarthPage() {
       <div className="h-screen">
         <EarthCanvas />
       </div>
+
+      <div className="text-white flex mb-[50px] px-[50px]">
+        <div className="w-1/3 text-left">
+          <h1 className="text-[50px]">{page}</h1>
+          <p>{planetDescription[page]}</p>
+        </div>
+      </div>
+
       {/* EarthWeather section */}
       <div
         id="earth-weather"

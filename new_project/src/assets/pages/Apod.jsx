@@ -37,19 +37,23 @@ const Apod = () => {
     <div  className='text-white'>
       
       <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
+
       <div
         style={{
           position: "fixed",
           zIndex: -1,
         }}
-        
-        >
+
+      >
         <Starfield
+
+
           starCount={10000}
           starColor={[255, 255, 255]}
           speedFactor={0.05}
           backgroundColor="black"
         />
+
 
 </div>
       </div>
@@ -89,3 +93,6 @@ const Apod = () => {
 };
 
 export default Apod;
+
+
+    

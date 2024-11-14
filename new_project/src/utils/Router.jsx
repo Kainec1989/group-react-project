@@ -9,7 +9,11 @@ import SaturnPage from "../assets/pages/SaturnPage.jsx";
 import UranusPage from "../assets/pages/UranusPage.jsx";
 import NeptunePage from "../assets/pages/NeptunePage.jsx";
 import Apod from "../assets/pages/Apod.jsx";
+
+
 import PageNotFound from "../assets/pages/PageNotFound.jsx";
+
+
 
 const router = createBrowserRouter([
   {
@@ -54,8 +58,13 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
+
+
+    
     element: <PageNotFound />,
   },
+
+
 ]);
 
 export default router;
