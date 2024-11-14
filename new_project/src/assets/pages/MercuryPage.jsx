@@ -4,12 +4,15 @@ import Starfield from "react-starfield";
 import { motion } from "framer-motion";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../components/ContextProvider";
+import { planetDescription } from "../../utils/constants";
 
 function MercuryPage() {
-  const { setPage } = useContext(MyContext);
+  const { page, setPage, planetData, error, fetchPlanetData } =
+    useContext(MyContext);
   useEffect(() => {
     setPage("Mercury");
   }, []);
+  console.log(planetData);
   return (
     <div>
       <div
@@ -34,6 +37,12 @@ function MercuryPage() {
       >
         <MercuryCanvas />
       </motion.div>
+      <div className="text-white flex mb-[50px] px-[50px]">
+        <div className="w-1/3 text-left">
+          <h1 className="text-[50px]">{page}</h1>
+          <p>{planetDescription[page]}</p>
+        </div>
+      </div>
     </div>
   );
 }

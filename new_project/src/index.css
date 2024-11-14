@@ -5,6 +5,7 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #555 #2c2c2c;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   color-scheme: dark;
 }
 
- 
 .weather-container {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;

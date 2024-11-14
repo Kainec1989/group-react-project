@@ -1,18 +1,17 @@
-import JupiterCanvas from "../components/Jupiter";
 import Navbar from "../components/Navbar";
 import Starfield from "react-starfield";
-import { motion } from "framer-motion";
-import { useContext, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { MyContext } from "../components/ContextProvider";
-import { planetDescription } from "../../utils/constants";
+import GalaxyCanvas from "../components/Galaxy";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Apod from "./Apod";
 
-function JupiterPage() {
-  const { page, setPage, planetData, error, fetchPlanetData } =
-    useContext(MyContext);
+function GalaxyPage() {
+  const { setPage } = useContext(MyContext);
   useEffect(() => {
-    setPage("Jupiter");
-  }, []);
-  console.log(planetData);
+    setPage("Galaxy");
+  }, [setPage]);
   return (
     <div>
       <div
@@ -35,16 +34,11 @@ function JupiterPage() {
         initial={{ opacity: 0, x: "-100%" }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <JupiterCanvas />
+        <GalaxyCanvas />
       </motion.div>
-      <div className="text-white flex mb-[50px] px-[50px]">
-        <div className="w-1/3 text-left">
-          <h1 className="text-[50px]">{page}</h1>
-          <p>{planetDescription[page]}</p>
-        </div>
-      </div>
+      <Apod />
     </div>
   );
 }
 
-export default JupiterPage;
+export default GalaxyPage;
