@@ -40,11 +40,13 @@ export default function Apod() {
         }}
       >
         <Starfield
+
           starCount={10000}
           starColor={[255, 255, 255]}
           speedFactor={0.05}
           backgroundColor="black"
         />
+
       </div>
 
       <h1 className="text-5xl p-5 font-bold mb-9 text-center ">
@@ -90,3 +92,4 @@ export default function Apod() {
     </div>
   );
 }
+
