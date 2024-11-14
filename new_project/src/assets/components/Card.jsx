@@ -11,6 +11,7 @@ const Card = ({ sol, data }) => {
         cursor: "pointer",
         margin: "10px",
         padding: "10px",
+
         flex: "1 1 calc(25% - 20px)",
         backgroundColor: "rgba(0, 0, 0, 0.5)",
         color: "white",

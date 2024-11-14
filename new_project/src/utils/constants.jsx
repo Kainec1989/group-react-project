@@ -3,11 +3,14 @@ const navLinks = [
   { name: "Venus", path: "/venus" },
   { name: "Earth", path: "/earth" },
 
+
+
   { name: "Mars", path: "/mars" },
   { name: "Jupiter", path: "/jupiter" },
   { name: "Saturn", path: "/saturn" },
   { name: "Uranus", path: "/uranus" },
   { name: "Neptune", path: "/neptune" },
+
 
 ];
 
@@ -32,6 +35,7 @@ const navStyles = {
   Apod: "bg-gradient-to-l from-red-400 to-grey-800  px-10 items-center  p-4 w-full flex justify-between",
 };
 
+
 const planetDescription = {
   Earth:
     "Our blue planet, teeming with life and water, has diverse ecosystems, from deep oceans to towering mountains. Earth's atmosphere and perfect distance from the sun create a habitable environment that supports complex ecosystems and human civilization.",
@@ -51,4 +55,5 @@ const planetDescription = {
 };
 
 export { navLinks, navStyles, planetDescription };
+
 

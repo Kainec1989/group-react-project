@@ -7,8 +7,10 @@ import { MyContext } from "../components/ContextProvider";
 import { planetDescription } from "../../utils/constants";
 
 function MercuryPage() {
+
   const { page, setPage, planetData, error, fetchPlanetData } =
     useContext(MyContext);
+
   useEffect(() => {
     setPage("Mercury");
   }, []);
