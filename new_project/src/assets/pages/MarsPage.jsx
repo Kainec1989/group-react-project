@@ -7,6 +7,7 @@ import { MyContext } from "../components/ContextProvider";
 import Weather from "../components/Weather";
 import { fetchWeatherData } from "../../../src/constants";
 import { useLocation } from "react-router-dom";
+import { planetDescription } from "../../utils/constants";
 
 function MarsPage() {
   const [weatherData, setWeatherData] = useState(null);
@@ -19,7 +20,8 @@ function MarsPage() {
     getWeatherData();
   }, []);
 
-  const { setPage, planetData, error, fetchPlanetData } = useContext(MyContext);
+  const { page, setPage, planetData, error, fetchPlanetData } =
+    useContext(MyContext);
   useEffect(() => {
     setPage("Mars");
   }, [setPage]);
@@ -57,6 +59,12 @@ function MarsPage() {
         >
           <MarsCanvas />
         </motion.div>
+        <div className="text-white flex mb-[100px] px-[50px]">
+          <div className="w-1/3 text-left">
+            <h1 className="text-[50px]">{page}</h1>
+            <p>{planetDescription[page]}</p>
+          </div>
+        </div>
 
         {weatherData ? (
           <Weather weatherData={weatherData} />

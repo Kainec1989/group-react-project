@@ -30,4 +30,22 @@ const navStyles = {
   Apod: "bg-gradient-to-l from-red-400 to-grey-800  px-10 items-center  p-4 w-full flex justify-between",
 };
 
-export { navLinks, navStyles };
+const planetDescription = {
+  Earth:
+    "Our blue planet, teeming with life and water, has diverse ecosystems, from deep oceans to towering mountains. Earth's atmosphere and perfect distance from the sun create a habitable environment that supports complex ecosystems and human civilization.",
+  Mercury:
+    "The closest planet to the sun, Mercury is a small, rocky world with extreme temperatures. It has a cratered surface, similar to our moon, and no atmosphere to retain heat, leading to scorching days and freezing nights.",
+  Venus:
+    "A hot, cloud-covered planet with a dense atmosphere rich in sulfuric acid. Venus has a volcanic landscape and is often called Earth’s twin due to its similar size, but its extreme greenhouse effect makes it the hottest planet in the solar system.",
+  Mars: "The Red Planet, known for its iron-rich soil that gives it a reddish hue. Mars has vast deserts, towering volcanoes, and the largest canyon in the solar system, with evidence suggesting it may have once had water and potentially even microbial life.",
+  Jupiter:
+    "The largest planet in the solar system, a gas giant with thick bands of clouds and powerful storms, including the Great Red Spot. Jupiter has a strong magnetic field and dozens of moons, some of which may harbor oceans beneath their icy surfaces.",
+  Saturn:
+    "Famous for its spectacular ring system, Saturn is a gas giant with a pale yellow hue and an intricate system of icy rings. Known for its low density and gentle atmosphere, Saturn is orbited by unique moons with interesting geological features.",
+  Uranus:
+    "An ice giant with a pale blue-green color due to methane in its atmosphere. Uranus has an unusual axial tilt, causing it to rotate on its side, and has faint rings and a cold, windy atmosphere.",
+  Neptune:
+    "A distant, deep blue ice giant with supersonic winds and massive storms. Neptune has a dynamic atmosphere, and its largest moon, Triton, has geysers that suggest the presence of subsurface oceans.",
+};
+
+export { navLinks, navStyles, planetDescription };
