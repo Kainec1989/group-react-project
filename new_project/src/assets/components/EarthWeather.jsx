@@ -51,9 +51,7 @@ const EarthWeather = () => {
         <button type="submit">Get Weather</button>
       </form>
 
-      <button onClick={toggleUnit}>
-        Show in {unit === "metric" ? "Fahrenheit" : "Celsius"}
-      </button>
+     
 
       {error && <p className="error">{error}</p>}
 
@@ -72,6 +70,9 @@ const EarthWeather = () => {
             Wind Speed: {weatherData.wind.speed}{" "}
             {unit === "metric" ? "m/s" : "mph"}
           </p>
+          <button onClick={toggleUnit}>
+          Show in {unit === "metric" ? "Fahrenheit" : "Celsius"}
+        </button>
         </div>
       )}
     </div>
