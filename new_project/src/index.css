@@ -45,7 +45,7 @@ body {
 
 .weather-container button {
   padding: 10px 15px;
-  background: #4caf50;
+  background: #5496e2;
   color: white;
   border: none;
   border-radius: 4px;
@@ -55,7 +55,7 @@ body {
 }
 
 .weather-container button:hover {
-  background: #45a049;
+  background: #255faa;
 }
 
 .weather-info {
