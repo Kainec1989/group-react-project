@@ -1,12 +1,12 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./utils/Router";
-import MyContextProvider from "./assets/components/ContextProvider";
+import PlanetProvider from "./context/PlanetProvider";
 
 function App() {
   return (
-    <MyContextProvider>
+    <PlanetProvider>
       <RouterProvider router={router} />
-    </MyContextProvider>
+    </PlanetProvider>
   );
 }
 
